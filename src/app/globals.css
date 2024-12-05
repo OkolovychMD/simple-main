@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "@liveblocks/react-ui/styles.css";
+@import "@liveblocks/react-lexical/styles.css";
+@import "./cmdk.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+ font-family: "Bebas Neue", sans-serif, "Inter", "Rajdhani";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a {
+  text-decoration: none;
+  color: blue
+}
+a:link,
+a:visited {
+  color: silver;
+}
+
+li,
+ul,
+ol {
+  padding-top: 1px;
+  padding-bottom: 2px;
+}
+p,
+ul {
+  margin-top: 0px;
+}
+.swiper-pagination-bullet {
+  background-color: #ff6000 !important;
+}
+.swiper-pagination-bullet .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff6000 !important;
+}
+
+:root {
+  /* Default theme */
+  --white: #fff;
+  --black: #000;
+  --black20: #00000044;
+  --grey: #b3b8cd;
+  --gray2: #989898;
+  --silver: #c0c0c0;
+  --silverLight: #c0c0c0;
+  --silverDark: #606060;
+  --mainGreen: #4affa5;
+  --green227: #227b4d;
+  --darkGrey: #2c2c2c;
+  --darkGrey42: #424242;
+  --background: #151515;
+  --backgroundMain: #0e0e0e;
+  --grey4: #2d2d2d;
+  --greybg: #1e1e1e;
+  --greyhover: #282828;
+  --dark24: #242424;
+  --darkGreen: #001208;
+  --darkGreen08: #082818;
+  --white-grey: #fff;
+  --box-shadow-light: "transparent";
+}
+
+[data-theme="light"] {
+  /* Light Theme Colors */
+  --white: #000;
+  --black: #fff;
+  --black20: #00000044;
+  --grey: #444444;
+  --gray2: #6e6e6e;
+  --silver: #d6d6d6;
+  --silverLight: #8f8f8f;
+  --silverCA: #828282;
+  --silverDark: #606060;
+  --mainGreen: #00b65b;
+  --green227: #06e447;
+  --darkGrey: #d4d4d4;
+  --darkGrey42: #d1d5db;
+  --background: #fff;
+  --backgroundMain: #fff;
+  --grey4: #d1d5db;
+  --greybg: #f6f6f6;
+  --greyhover: #d1d5db;
+  --dark24: #242424;
+  --darkGreen: #edfff6;
+  --darkGreen08: #edfff6;
+  --white-grey: #ebebeb;
+  --box-shadow-light: rgba(144, 144, 144, 0.337);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme Colors */
+  --white: #fff;
+  --black: #000;
+  --black20: #00000044;
+  --grey: #b3b8cd;
+  --gray2: #989898;
+  --silver: #c0c0c0;
+  --silverLight: #c0c0c0;
+  --silverCA: #cacaca;
+  --silverDark: #606060;
+  --mainGreen: #4affa5;
+  --green227: #227b4d;
+  --darkGrey: #2c2c2c;
+  --darkGrey42: #424242;
+  --background: #151515;
+  --backgroundMain: #0e0e0e;
+  --grey4: #2d2d2d;
+  --greybg: #1e1e1e;
+  --greyhover: #282828;
+  --dark24: #242424;
+  --darkGreen: #001208;
+  --darkGreen08: #082818;
+  --white-grey: #fff;
+  --box-shadow-light: "transparent";
+}
+
+body {
+  background-color: var(--background);
+  color: var(--black);
+  transition: background-color 0.8s, color 0.8s;
+  max-height: 120vh;
+  overflow: auto;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.select {
+  background: #ff6000 !important;
+}
+
+.select > .MuiSelect-select {
+  color: #fff;
+  background: #ff6000 !important;
+}
+
+.select * {
+  color: #fff !important;
+}
+
+
+::selection {
+  @apply bg-indigo-100/75;
+}
+
+p {
+  margin: 0.8rem 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.8rem 0 0.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.8rem 0 0.8rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.8rem 0 0.8rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.8rem 0 0.8rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.8rem 0 0.8rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.8rem 0 0.8rem;
+}
+
+blockquote {
+  box-sizing: border-box;
+  border-left: 3px solid rgb(90, 88, 99);
+  padding-left: 0.9rem;
+  margin: 0.8rem 0;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+
+li::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0 !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+code {
+  background: rgb(241, 241, 244);
+  padding: 1px;
+  font-size: 0.94em;
+  border-radius: 4px;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 1.8rem;
+}
+
+.lexical-bold {
+  font-weight: bold;
+}
+
+.lexical-italic {
+  font-style: italic;
+}
+
+.lexical-underline {
+  text-decoration: underline;
+}
+
+.lexical-strikethrough {
+  text-decoration: line-through;
+}
+
+.lexical-underline.lexical-strikethrough {
+  text-decoration: underline line-through;
+}
+
+.lb-root {
+  --lb-accent: #4f46e5;
+  --lb-elevation-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+}
+
+.lb-thread .lb-thread-composer {
+  border-top: 1px solid rgba(228, 228, 231, 0.8);
+}
+
+.lb-composer, .lb-thread {
+  font-size: 14px;
+}
+
+.lb-thread-composer:after {
+  content: none;
+}
+
+.lb-portal {
+  z-index: 9999999;
+}
+
+.editableContent {
+  height: 100px;
+  width: 75%;
+  border: 1px solid grey;
+  padding: 20px;
+  color: black;
+  display: block;
+  outline: none;
+  border-radius: 8px;
+}
+
+.inter {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}

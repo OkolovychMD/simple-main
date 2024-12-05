@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/constants": ["./src/constants/*"],
+      "@/themeStorage": ["./src/constants/theme/*"],
+      "@/prompts": ["./src/constants/prompt/*"],
+      "@/interfaces": ["./src/interfaces/*"],
+      "@/utils": ["./src/utils/*"],
+      "@/api": ["./src/api/*"],
+      "@/assets": ["./src/assets/*"],
+      "@/images": ["./src/assets/images/*"]
+    }
+  }
+}
